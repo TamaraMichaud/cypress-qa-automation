@@ -2,6 +2,12 @@
 
 import HomePage from "../../pageObjects/home";
 
+Cypress.config('pageLoadTimeout', 5000); // over-ride cypress.json ONLY FOR THIS SUITE; 
+// ^^ you can also put this  before and after the specific action you want to change the wait
+// for (i.e. inside an "it"... (maybe it should only be inside the it... this way does not
+// cause an error, but doesn't mean it's certainly correct...! :/))
+
+
 describe("Framework Test Suite", function(){
     
     beforeEach(function() {
