@@ -1,0 +1,12 @@
+{
+    "name" : "Tamara",
+    "gender" : "Female",
+    "productName" : "Blackberry",
+    "productPrice" : "$24.99",
+    "productInfo" : { "name" : "Blackberry",
+                      "price" : "$24.99",
+                      "STILLINVALID" : "TO NEST INFOS :("
+                    },
+    "productList" : [ "Blackberry", "Nokia Edge"]
+    
+}

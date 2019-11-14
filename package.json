@@ -1,0 +1,22 @@
+{
+  "name": "udemy-cypress",
+  "version": "1.0.0",
+  "description": "udemy course results",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TamaraMichaud/cypress-qa-automation.git"
+  },
+  "author": "Tamara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TamaraMichaud/cypress-qa-automation/issues"
+  },
+  "homepage": "https://github.com/TamaraMichaud/cypress-qa-automation#readme",
+  "devDependencies": {
+    "cypress": "^3.6.1"
+  }
+}
