@@ -57,3 +57,23 @@ Cypress.Commands.add("selectProduct", (productName) => {
     })
 
 })
+
+
+
+import ProductPage from '../integration/pageObjects/product';
+Cypress.Commands.add("selectProductUSINGPAGE", (productName) => { 
+  
+    const productPage = new ProductPage();  
+
+    productPage.getProductList().each(($element, index, $list) => {
+
+        if($element.text().includes(productName)) {
+        
+            productPage.addToCart($element);
+            
+        }
+    })
+
+})
+
+
