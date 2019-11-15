@@ -1,9 +1,12 @@
 {
-  "chromeWebSecurity" : false,
-  "defaultCommandTimeout" : 8000,
-  "pageLoadTimeout" : 10000,
-  "env" : { 
-            "url" : "https://rahulshettyacademy.com/angularpractice",
-            "environment" : "test"
-          }
- }
+  "chromeWebSecurity": false,
+  "defaultCommandTimeout": 8000,
+  "pageLoadTimeout": 10000,
+  "env": {
+    "url": "https://rahulshettyacademy.com/angularpractice",
+    "environment": "test",
+    "CYPRESS_RECORD_KEY" : "// THIS DOESNT APPEAR TO WORK... 0b5bb2ee-2baf-4f40-922b-e71b459c5967"
+
+  },
+  "projectId": "9h6f9h"
+}

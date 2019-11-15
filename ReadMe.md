@@ -15,6 +15,19 @@
 	./node_modules/.bin/cypress run --browser chrome --headed --spec "cypress/integration/examples/UDEMY_examples/test1.js" --env environment="test"
 
 
+
+- Dashboard Setup
+
+		./node_modules/.bin/cypress run --record --key 0b5bb2ee-2baf-4f40-922b-e71b459c5967
+
+	OR, add to cypress.json:
+
+		{
+ 		 "projectId": "9h6f9h"
+		}
+
+
+
 - Selectors:
 
 	(tagname optional)
