@@ -12,6 +12,7 @@
 	./node_modules/.bin/cypress run --browser chrome --headed --spec "cypress/integration/examples/UDEMY_examples/test1.js"
                 ^^ to make it use a "different" (the only other) browser...
 
+	./node_modules/.bin/cypress run --browser chrome --headed --spec "cypress/integration/examples/UDEMY_examples/test1.js" --env environment="test"
 
 
 - Selectors:
@@ -73,4 +74,29 @@
 
         cy.get('#inlineRadio3').should('be.disabled')
         // cy.get('#inlineRadio3').should('not.be.visible')
+
+
+
+- Troubleshooting
+
+	[command-line execution from powershell]
+	On execution of:
+		./node_modules/.bin/cypress run --browser chrome --headed --spec "cypress/integration/examples/UDEMY_examples/test4-environmentalVars.js" --env environment="qa"
+
+	If you receive the following error message:
+		node_modules\.bin\cypress.ps1 cannot be loaded
+		because running scripts is disabled on this system. For more information, see about_Execution_Policies at
+		https:/go.microsoft.com/fwlink/?LinkID=135170.
+		At line:1 char:1
+		+ ./node_modules/.bin/cypress run --browser chrome --headed --spec "cyp ...
+		+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    		+ CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    		+ FullyQualifiedErrorId : UnauthorizedAccess
+
+	Then run the following:
+		Set-ExecutionPolicy -Scope CurrentUser
+	You will be prompted with:
+		ExecutionPolicy:
+	To which the answer is: 
+		remotesigned
 

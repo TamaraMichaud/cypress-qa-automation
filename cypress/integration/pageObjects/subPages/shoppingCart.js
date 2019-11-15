@@ -13,33 +13,33 @@ class ShoppingCart {
 
         var totalPrice = 0;
         var cumulativePrices = 0;
-        cy.get(PRODUCT_LIST).each(function(productTableRow){
+        // cy.get(PRODUCT_LIST).each(function(productTableRow){
+        cy.get(PRODUCT_LIST).each((productTableRow, index, $list) => {
 
             var itemName = productTableRow.find(PRODUCT_NAME).text();
             // var itemPrice = productTableRow.find(PRODUCT_PRICE).text();
             if(itemName == "") {
                 // not a product
                 var overallPrice = productTableRow.find(TOTAL_PRICE).text();
-                if( overallPrice != "") {
+                if( overallPrice != "" && totalPrice == 0) {
 
-                    totalPrice = overallPrice.split(' ')[1];
+                    totalPrice = Number(overallPrice.split(' ')[1]);
                     cy.log("Total price per page: " + totalPrice);
 
                 }
 
             } else {
                 // is a product
-                var itemPrice = productTableRow.find(PRODUCT_PRICE).text().split(' ')[1];
+                var itemPrice = productTableRow.find(PRODUCT_PRICE).text().split(' ')[1].trim();
                 cy.log("Item Name: " + productTableRow.find(PRODUCT_NAME).text() + " Costs: " + itemPrice);
-                cumulativePrices += itemPrice;
+                cumulativePrices = Number(cumulativePrices) + Number(itemPrice);
 
             }
+        }).then(function(){
+
+            cy.log("Summed prices " + cumulativePrices + " equal to: " + totalPrice + "?");
+            expect(cumulativePrices).to.equal(totalPrice);
         })
-
-
-cy.log("Summed prices " + cumulativePrices + " equal to: " + totalPrice + "?");
-
-        return "0"
     }
 
     continueCheckout(){

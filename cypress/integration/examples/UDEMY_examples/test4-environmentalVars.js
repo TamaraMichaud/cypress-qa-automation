@@ -12,11 +12,16 @@ Cypress.config('pageLoadTimeout', 5000); // over-ride cypress.json ONLY FOR THIS
 
 
 describe("Full Test Using Lessons Learnt", function(){
+
+
     
     beforeEach(function() {
         
         cy.log('Starting test...');
-        cy.visit("https://rahulshettyacademy.com/angularpractice");
+        cy.visit(Cypress.env('url'));
+
+cy.log('Environment Chosen Is: ' + Cypress.env('environment'));
+
         cy.fixture('test2-fixtures').as("suiteInfo");
     })
 
