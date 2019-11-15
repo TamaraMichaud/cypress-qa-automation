@@ -1,9 +1,9 @@
 /// <reference types="cypress"/>
 
-import HomePage from "../../pageObjects/home";
-import ProductPage from "../../pageObjects/product";
-import ShoppingCart from "../../pageObjects/subPages/shoppingCart";
-import Checkout from "../../pageObjects/subPages/checkout";
+import HomePage from "../../../support/pageObjects/home";
+import ProductPage from "../../../support/pageObjects/product";
+import ShoppingCart from "../../../support/pageObjects/subPages/shoppingCart";
+import Checkout from "../../../support/pageObjects/subPages/checkout";
 
 Cypress.config('pageLoadTimeout', 5000); // over-ride cypress.json ONLY FOR THIS SUITE; 
 // ^^ you can also put this  before and after the specific action you want to change the wait

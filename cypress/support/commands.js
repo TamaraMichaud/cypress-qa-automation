@@ -42,7 +42,7 @@ Cypress.Commands.add("getProduct", (productName, productPrice) => {
 })
 
 
-import HomePage from '../integration/pageObjects/home';
+import HomePage from './pageObjects/home';
 Cypress.Commands.add("selectProduct", (productName) => { 
   
     const homePage = new HomePage();  // not used, but no error either :O
@@ -60,7 +60,7 @@ Cypress.Commands.add("selectProduct", (productName) => {
 
 
 
-import ProductPage from '../integration/pageObjects/product';
+import ProductPage from './pageObjects/product';
 Cypress.Commands.add("selectProductUSINGPAGE", (productName) => { 
   
     const productPage = new ProductPage();  
