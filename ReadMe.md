@@ -1,3 +1,13 @@
+- Getting Started:
+
+	- after installing node-js, create your project folder, enter it and execute:
+		npm init  						  // and follow the walkthrough
+		npm install cypress --save-dev	  // this will create the node_modules folder 
+												(add to .gitignore, you can have a common node_modules for all projects, simply ensure you launch it from the correct project..)
+		./node_modules/.bin/cypress open  // this will create your cypress folder
+
+
+
 - Command-line execution;
 
 	./node_modules/.bin/cypress run
